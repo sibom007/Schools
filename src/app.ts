@@ -14,12 +14,12 @@ app.use(cookieParser());
 
 
 app.get("/", (req: Request, res: Response) => {
-    res.send({
-        Message: "Assmient-8 Is Runing"
-    })
-})
+  res.send({
+    Message: "School Is Runing",
+  });
+});
 
-app.use("/api", router)
+app.use("/", router);
 app.use(globalErrorHandler);
 app.use((req: Request, res: Response, next: NextFunction) => {
     res.status(httpStatus.NOT_FOUND).json({
